@@ -8,7 +8,14 @@
 import Foundation
 
 class HitListViewModel {
+    
+    // MARK:- Properties
     private(set) var hitList:[Hits] = []
+    
+    var count: Int {
+        return hitList.count
+    }
+    // MARK:- Hit List View Model methods
     func fetchData(completion:@escaping()->()) {
         WebService.getRequest { [weak self](result:Result<DataModel,WebServiceError>) in
             guard let strongSelf = self else {return}
@@ -21,22 +28,10 @@ class HitListViewModel {
             }
         }
     }
-    
-    var count: Int {
-        return hitList.count
-    }
-    
     func getHitVieModelAt(index:Int) -> HitViewModel {
         return HitViewModel(imageStringURl: hitList[index].previewURL ?? "")
     }
 }
 
 
-class HitViewModel{
-  private(set) var imageStringURl:String
-    init(imageStringURl:String) {
-        self.imageStringURl = imageStringURl
-    }
-    
-    
-}
+

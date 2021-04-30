@@ -10,7 +10,8 @@ import AVKit
 import AVFoundation
 
 class HitCell: UITableViewCell {
-
+    
+    // MARK:- Properites
     @IBOutlet weak var hitImageView: UIImageView!
     @IBOutlet weak var videoView: PlayerView!
     var imageIsHidden:Bool = false{
@@ -22,12 +23,12 @@ class HitCell: UITableViewCell {
                 hitImageView.isHidden = false
                 videoView.isHidden = true
             }
-           
+            
         }
     }
     
+    // MARK: - Hit Cell Methods
     func setCell(hitVM:HitViewModel, index:Int)  {
-       
         if index == 12 || index == 40 {
             imageIsHidden = true
             setVideoPlayer()
@@ -43,11 +44,12 @@ class HitCell: UITableViewCell {
         videoView.playerLayer.player = avPlayer
     }
     
-    
+    // MARK:- Property and methods Hit Cell class 
     static let identifier = "HitCell"
     static func nib()->UINib{
         return UINib(nibName: identifier, bundle: nil)
     }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -59,10 +61,10 @@ class HitCell: UITableViewCell {
         videoView.player?.pause()
         
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
         // Configure the view for the selected state
     }
 }

@@ -21,6 +21,7 @@
 		D6C73050263702DA00D65FAA /* ImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C7304F263702DA00D65FAA /* ImageViewExtension.swift */; };
 		D6C73054263704B700D65FAA /* HitCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C73052263704B700D65FAA /* HitCell.swift */; };
 		D6C73055263704B700D65FAA /* HitCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6C73053263704B700D65FAA /* HitCell.xib */; };
+		D6E6B09A263BD38900182522 /* HitViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E6B099263BD38900182522 /* HitViewModel.swift */; };
 		D6ED3AAE2637C7ED00D1C45E /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6ED3AAD2637C7ED00D1C45E /* PlayerView.swift */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +43,7 @@
 		D6C7304F263702DA00D65FAA /* ImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewExtension.swift; sourceTree = "<group>"; };
 		D6C73052263704B700D65FAA /* HitCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HitCell.swift; sourceTree = "<group>"; };
 		D6C73053263704B700D65FAA /* HitCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HitCell.xib; sourceTree = "<group>"; };
+		D6E6B099263BD38900182522 /* HitViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HitViewModel.swift; sourceTree = "<group>"; };
 		D6ED3AAD2637C7ED00D1C45E /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
 		F383E00B4B680E3EFDFA434F /* Pods_YIT.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YIT.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -131,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				D6C7304C2636FCE500D65FAA /* HitListViewModel.swift */,
+				D6E6B099263BD38900182522 /* HitViewModel.swift */,
 			);
 			path = "View Model";
 			sourceTree = "<group>";
@@ -281,6 +284,7 @@
 			files = (
 				D6ED3AAE2637C7ED00D1C45E /* PlayerView.swift in Sources */,
 				D6C7304D2636FCE500D65FAA /* HitListViewModel.swift in Sources */,
+				D6E6B09A263BD38900182522 /* HitViewModel.swift in Sources */,
 				D6C73050263702DA00D65FAA /* ImageViewExtension.swift in Sources */,
 				D6C730282636F65D00D65FAA /* ViewController.swift in Sources */,
 				D6C730472636FA8800D65FAA /* DataModel.swift in Sources */,

@@ -8,8 +8,6 @@
 import Foundation
 
 struct DataModel:Decodable {
-    //var total:Int?
-    //var totalHits:Int?
     let hits:[Hits]
 }
 struct Hits:Decodable {

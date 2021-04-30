@@ -11,6 +11,8 @@ import AVFoundation
 
 
 class ViewController: UIViewController {
+    
+    //MARK:- Properties
     @IBOutlet weak var hitTable: UITableView!{
         didSet{
             hitTable.dataSource = self
@@ -24,6 +26,7 @@ class ViewController: UIViewController {
     var videoLastDuration:Float64 = 0.0
     var avPlayerItem:AVPlayerItem?
     
+    // MARK:- LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         hitListVM = HitListViewModel()
@@ -33,6 +36,7 @@ class ViewController: UIViewController {
         }
     }
     
+    // MARK: - Video methods
     func getCurrentItem(cell:HitCell)->AVPlayerItem?{
         guard let currentItem = cell.videoView.player?.currentItem else { return nil}
         return currentItem
@@ -47,9 +51,9 @@ class ViewController: UIViewController {
             cell.videoView.player?.play()
         }
     }
-    
-    
 }
+
+  // MARK: - Table View Data Source methods
 extension ViewController:UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return   hitListVM?.count ?? 0
@@ -63,6 +67,7 @@ extension ViewController:UITableViewDataSource{
     
 }
 
+// MARK:- Table View Delegate methods
 extension ViewController:UITableViewDelegate{
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         guard let hitCell = cell as? HitCell else { return }
